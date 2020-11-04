@@ -5,7 +5,7 @@ output: github_document
 
 ```{r, eval = FALSE}
 library(tidyverse)
-
+library(xml2)
 library(rvest)
 library(httr)
 

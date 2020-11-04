@@ -34,5 +34,6 @@ This one has 4 elements... and we want to detect one
 string_vec = c("my", "name", "is", "jeff")
 
 str_detect(string_vec, "jeff")
+str_replace(string_vec, "jeff", "Jeff")
 ```
 We get FALSE FALSE FALSE TRUE --- can also detect just 'j' ... will detect 'e' twice (once for name and once for jeff)
