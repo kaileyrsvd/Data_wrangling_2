@@ -1,0 +1,38 @@
+---
+title: "strings_and_factors"
+output: github_document
+---
+
+```{r, eval = FALSE}
+library(tidyverse)
+library(rvest)
+library(httr)
+library(stringr)
+library(forcats)
+
+knitr::opts_chunk$set(
+  fig.width = 6, 
+  fig.asp = .6, 
+  out.width = "90%"
+)
+
+theme_set(theme_minimal() + theme(legend.position = "bottom"))
+
+options(
+  ggplot.continuous.colour = "viridis", 
+  ggplot.continuous.fill = "viridis"
+)
+
+scale_colour_discrete = scale_colour_viridis_d
+scale_fill_discrete = scale_fill_viridis_d
+```
+
+## Strings and regex 
+
+This one has 4 elements... and we want to detect one
+```{r}
+string_vec = c("my", "name", "is", "jeff")
+
+str_detect(string_vec, "jeff")
+```
+We get FALSE FALSE FALSE TRUE --- can also detect just 'j' ... will detect 'e' twice (once for name and once for jeff)
